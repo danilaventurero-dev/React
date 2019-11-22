@@ -30,12 +30,11 @@ class Card extends Component{
         return (
             <div>
                 <Row>
-                
                 {
                     this.state.users.map( elm => 
                         <Col xs="3" >
                             <Tarjeta>
-                                <CardImg top width="20%" src="https://picsum.photos/50/50" alt="Card image cap" />
+                                <CardImg top width="20%" src={elm.image} alt="Card image cap" />
                                 <CardBody>
                                     <CardTitle> {elm.name} </CardTitle>
                                     <CardText> El id de {elm.name} es {elm.id} y su edad es {elm.age}</CardText>
