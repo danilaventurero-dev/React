@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './LoginForm.css';
-import Input  from '../email-input/EmailInput';
+import InputEmail  from '../email-input/EmailInput';
+import InputPass  from '../pass-input/PassInput';
 
 /**
  * LoginForm
@@ -11,12 +12,16 @@ import Input  from '../email-input/EmailInput';
 const LoginForm = (props) => {
 
     const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
 
     return (
         <div className="login-form">LoginForm!
-            <form action="">
-            <label htmlFor="">EMail</label><br/>
-                <Input value={email} onChange={setEmail} />
+            <form action=""><br/>
+            <label htmlFor="">Email</label><br/>
+                <InputEmail value={email} onChange={setEmail} />
+                
+            <label htmlFor="">Pass</label><br/>
+                <InputPass value={pass} onChange={setPass} />
             </form>
         </div>
     );
